@@ -8,10 +8,10 @@ import (
 	"strings"
 	"unicode"
 
-	"github.com/trufflesecurity/trufflehog/v3/pkg/pb/detectorspb"
-	"github.com/trufflesecurity/trufflehog/v3/pkg/pb/source_metadatapb"
-	"github.com/trufflesecurity/trufflehog/v3/pkg/pb/sourcespb"
-	"github.com/trufflesecurity/trufflehog/v3/pkg/sources"
+	"github.com/akeylesslabs/trufflehog/pkg/pb/detectorspb"
+	"github.com/akeylesslabs/trufflehog/pkg/pb/source_metadatapb"
+	"github.com/akeylesslabs/trufflehog/pkg/pb/sourcespb"
+	"github.com/akeylesslabs/trufflehog/pkg/sources"
 )
 
 // Detector defines an interface for scanning for and verifying secrets.

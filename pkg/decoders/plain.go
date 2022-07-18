@@ -1,7 +1,7 @@
 package decoders
 
 import (
-	"github.com/trufflesecurity/trufflehog/v3/pkg/sources"
+	"github.com/akeylesslabs/trufflehog/pkg/sources"
 )
 
 // Ensure the Decoder satisfies the interface at compile time

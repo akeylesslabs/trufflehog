@@ -6,9 +6,9 @@ import (
 	"regexp"
 	"strings"
 
-	"github.com/trufflesecurity/trufflehog/v3/pkg/common"
-	"github.com/trufflesecurity/trufflehog/v3/pkg/detectors"
-	"github.com/trufflesecurity/trufflehog/v3/pkg/pb/detectorspb"
+	"github.com/akeylesslabs/trufflehog/pkg/common"
+	"github.com/akeylesslabs/trufflehog/pkg/detectors"
+	"github.com/akeylesslabs/trufflehog/pkg/pb/detectorspb"
 )
 
 type Scanner struct{}
@@ -51,7 +51,7 @@ func (s Scanner) FromData(ctx context.Context, verify bool, data []byte) (result
 			if err != nil {
 				continue
 			}
-			req.Header.Add("X-API-Key",resMatch)
+			req.Header.Add("X-API-Key", resMatch)
 			res, err := client.Do(req)
 			if err == nil {
 				defer res.Body.Close()

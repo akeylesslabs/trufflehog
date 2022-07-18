@@ -4,10 +4,10 @@ import (
 	"context"
 	"runtime"
 
+	"github.com/akeylesslabs/trufflehog/pkg/pb/sourcespb"
+	"github.com/akeylesslabs/trufflehog/pkg/sources/filesystem"
 	"github.com/go-errors/errors"
 	"github.com/sirupsen/logrus"
-	"github.com/trufflesecurity/trufflehog/v3/pkg/pb/sourcespb"
-	"github.com/trufflesecurity/trufflehog/v3/pkg/sources/filesystem"
 	"google.golang.org/protobuf/proto"
 	"google.golang.org/protobuf/types/known/anypb"
 )

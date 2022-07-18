@@ -13,19 +13,19 @@ import (
 	"syscall"
 	"time"
 
+	"github.com/akeylesslabs/trufflehog/pkg/updater"
+	"github.com/akeylesslabs/trufflehog/pkg/version"
 	"github.com/felixge/fgprof"
 	"github.com/gorilla/mux"
 	"github.com/jpillora/overseer"
 	"github.com/sirupsen/logrus"
-	"github.com/trufflesecurity/trufflehog/v3/pkg/updater"
-	"github.com/trufflesecurity/trufflehog/v3/pkg/version"
 	"gopkg.in/alecthomas/kingpin.v2"
 
-	"github.com/trufflesecurity/trufflehog/v3/pkg/common"
-	"github.com/trufflesecurity/trufflehog/v3/pkg/decoders"
-	"github.com/trufflesecurity/trufflehog/v3/pkg/engine"
-	"github.com/trufflesecurity/trufflehog/v3/pkg/output"
-	"github.com/trufflesecurity/trufflehog/v3/pkg/sources/git"
+	"github.com/akeylesslabs/trufflehog/pkg/common"
+	"github.com/akeylesslabs/trufflehog/pkg/decoders"
+	"github.com/akeylesslabs/trufflehog/pkg/engine"
+	"github.com/akeylesslabs/trufflehog/pkg/output"
+	"github.com/akeylesslabs/trufflehog/pkg/sources/git"
 )
 
 var (

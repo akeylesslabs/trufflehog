@@ -9,12 +9,12 @@ import (
 	"testing"
 	"time"
 
+	"github.com/akeylesslabs/trufflehog/pkg/common"
+	"github.com/akeylesslabs/trufflehog/pkg/pb/credentialspb"
+	"github.com/akeylesslabs/trufflehog/pkg/pb/sourcespb"
+	"github.com/akeylesslabs/trufflehog/pkg/sources"
 	"github.com/kylelemons/godebug/pretty"
 	log "github.com/sirupsen/logrus"
-	"github.com/trufflesecurity/trufflehog/v3/pkg/common"
-	"github.com/trufflesecurity/trufflehog/v3/pkg/pb/credentialspb"
-	"github.com/trufflesecurity/trufflehog/v3/pkg/pb/sourcespb"
-	"github.com/trufflesecurity/trufflehog/v3/pkg/sources"
 	"google.golang.org/protobuf/types/known/anypb"
 )
 

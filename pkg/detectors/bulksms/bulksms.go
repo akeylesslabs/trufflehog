@@ -2,15 +2,15 @@ package bulksms
 
 import (
 	"context"
+	b64 "encoding/base64"
 	"fmt"
 	"net/http"
 	"regexp"
 	"strings"
-	b64 "encoding/base64"
 
-	"github.com/trufflesecurity/trufflehog/v3/pkg/common"
-	"github.com/trufflesecurity/trufflehog/v3/pkg/detectors"
-	"github.com/trufflesecurity/trufflehog/v3/pkg/pb/detectorspb"
+	"github.com/akeylesslabs/trufflehog/pkg/common"
+	"github.com/akeylesslabs/trufflehog/pkg/detectors"
+	"github.com/akeylesslabs/trufflehog/pkg/pb/detectorspb"
 )
 
 type Scanner struct{}
@@ -23,8 +23,7 @@ var (
 
 	//Make sure that your group is surrounded in boundry characters such as below to reduce false positives
 	keyPat = regexp.MustCompile(detectors.PrefixRegex([]string{"bulksms"}) + `\b([a-fA-Z0-9*]{29})\b`)
-	idPat = regexp.MustCompile(detectors.PrefixRegex([]string{"bulksms"}) + `\b([A-F0-9-]{37})\b`)
-
+	idPat  = regexp.MustCompile(detectors.PrefixRegex([]string{"bulksms"}) + `\b([A-F0-9-]{37})\b`)
 )
 
 // Keywords are used for efficiently pre-filtering chunks.
@@ -55,9 +54,9 @@ func (s Scanner) FromData(ctx context.Context, verify bool, data []byte) (result
 				DetectorType: detectorspb.DetectorType_Bulksms,
 				Raw:          []byte(resMatch),
 			}
-	
+
 			if verify {
-				data := fmt.Sprintf("%s:%s", resIdMatch,resMatch)
+				data := fmt.Sprintf("%s:%s", resIdMatch, resMatch)
 				sEnc := b64.StdEncoding.EncodeToString([]byte(data))
 				req, err := http.NewRequestWithContext(ctx, "GET", "https://api.bulksms.com/v1/messages", nil)
 				if err != nil {
@@ -77,10 +76,10 @@ func (s Scanner) FromData(ctx context.Context, verify bool, data []byte) (result
 					}
 				}
 			}
-	
+
 			results = append(results, s1)
 		}
-		
+
 	}
 
 	return detectors.CleanResults(results), nil

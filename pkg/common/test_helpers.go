@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/trufflesecurity/trufflehog/v3/pkg/sources"
+	"github.com/akeylesslabs/trufflehog/pkg/sources"
 )
 
 type ChunkFunc func(chunk *sources.Chunk) error

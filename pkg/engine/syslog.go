@@ -9,8 +9,8 @@ import (
 	"google.golang.org/protobuf/proto"
 	"google.golang.org/protobuf/types/known/anypb"
 
-	"github.com/trufflesecurity/trufflehog/v3/pkg/pb/sourcespb"
-	"github.com/trufflesecurity/trufflehog/v3/pkg/sources/syslog"
+	"github.com/akeylesslabs/trufflehog/pkg/pb/sourcespb"
+	"github.com/akeylesslabs/trufflehog/pkg/sources/syslog"
 )
 
 func (e *Engine) ScanSyslog(ctx context.Context, address, protocol, certPath, keyPath, format string, concurrency int) error {

@@ -7,10 +7,10 @@ import (
 	"regexp"
 	"strings"
 
-	"github.com/trufflesecurity/trufflehog/v3/pkg/detectors"
-	"github.com/trufflesecurity/trufflehog/v3/pkg/pb/detectorspb"
+	"github.com/akeylesslabs/trufflehog/pkg/detectors"
+	"github.com/akeylesslabs/trufflehog/pkg/pb/detectorspb"
 
-	"github.com/trufflesecurity/trufflehog/v3/pkg/common"
+	"github.com/akeylesslabs/trufflehog/pkg/common"
 )
 
 type Scanner struct{}

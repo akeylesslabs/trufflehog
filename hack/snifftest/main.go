@@ -16,13 +16,13 @@ import (
 	"golang.org/x/sync/semaphore"
 	"gopkg.in/alecthomas/kingpin.v2"
 
-	"github.com/trufflesecurity/trufflehog/v3/pkg/decoders"
-	"github.com/trufflesecurity/trufflehog/v3/pkg/detectors"
-	"github.com/trufflesecurity/trufflehog/v3/pkg/engine"
-	"github.com/trufflesecurity/trufflehog/v3/pkg/pb/source_metadatapb"
-	"github.com/trufflesecurity/trufflehog/v3/pkg/pb/sourcespb"
-	"github.com/trufflesecurity/trufflehog/v3/pkg/sources"
-	"github.com/trufflesecurity/trufflehog/v3/pkg/sources/git"
+	"github.com/akeylesslabs/trufflehog/pkg/decoders"
+	"github.com/akeylesslabs/trufflehog/pkg/detectors"
+	"github.com/akeylesslabs/trufflehog/pkg/engine"
+	"github.com/akeylesslabs/trufflehog/pkg/pb/source_metadatapb"
+	"github.com/akeylesslabs/trufflehog/pkg/pb/sourcespb"
+	"github.com/akeylesslabs/trufflehog/pkg/sources"
+	"github.com/akeylesslabs/trufflehog/pkg/sources/git"
 )
 
 var (

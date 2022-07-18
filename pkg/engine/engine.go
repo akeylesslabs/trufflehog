@@ -11,11 +11,11 @@ import (
 
 	"github.com/sirupsen/logrus"
 
-	"github.com/trufflesecurity/trufflehog/v3/pkg/decoders"
-	"github.com/trufflesecurity/trufflehog/v3/pkg/detectors"
-	"github.com/trufflesecurity/trufflehog/v3/pkg/pb/source_metadatapb"
-	"github.com/trufflesecurity/trufflehog/v3/pkg/pb/sourcespb"
-	"github.com/trufflesecurity/trufflehog/v3/pkg/sources"
+	"github.com/akeylesslabs/trufflehog/pkg/decoders"
+	"github.com/akeylesslabs/trufflehog/pkg/detectors"
+	"github.com/akeylesslabs/trufflehog/pkg/pb/source_metadatapb"
+	"github.com/akeylesslabs/trufflehog/pkg/pb/sourcespb"
+	"github.com/akeylesslabs/trufflehog/pkg/sources"
 )
 
 type Engine struct {

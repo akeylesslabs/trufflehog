@@ -5,11 +5,11 @@ import (
 	"fmt"
 	"runtime"
 
+	"github.com/akeylesslabs/trufflehog/pkg/pb/credentialspb"
+	"github.com/akeylesslabs/trufflehog/pkg/pb/sourcespb"
+	"github.com/akeylesslabs/trufflehog/pkg/sources/s3"
 	"github.com/go-errors/errors"
 	"github.com/sirupsen/logrus"
-	"github.com/trufflesecurity/trufflehog/v3/pkg/pb/credentialspb"
-	"github.com/trufflesecurity/trufflehog/v3/pkg/pb/sourcespb"
-	"github.com/trufflesecurity/trufflehog/v3/pkg/sources/s3"
 	"google.golang.org/protobuf/proto"
 	"google.golang.org/protobuf/types/known/anypb"
 )

@@ -1,8 +1,8 @@
 package git
 
 import (
+	"github.com/akeylesslabs/trufflehog/pkg/common"
 	"github.com/go-git/go-git/v5"
-	"github.com/trufflesecurity/trufflehog/v3/pkg/common"
 )
 
 type ScanOptions struct {

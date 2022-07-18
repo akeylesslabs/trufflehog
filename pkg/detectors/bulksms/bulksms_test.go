@@ -9,11 +9,11 @@ import (
 	"testing"
 	"time"
 
+	"github.com/akeylesslabs/trufflehog/pkg/detectors"
 	"github.com/kylelemons/godebug/pretty"
-	"github.com/trufflesecurity/trufflehog/v3/pkg/detectors"
 
-	"github.com/trufflesecurity/trufflehog/v3/pkg/common"
-	"github.com/trufflesecurity/trufflehog/v3/pkg/pb/detectorspb"
+	"github.com/akeylesslabs/trufflehog/pkg/common"
+	"github.com/akeylesslabs/trufflehog/pkg/pb/detectorspb"
 )
 
 func TestBulksms_FromChunk(t *testing.T) {
@@ -26,7 +26,6 @@ func TestBulksms_FromChunk(t *testing.T) {
 	secret := testSecrets.MustGetField("BULKSMS")
 	inactiveSecret := testSecrets.MustGetField("BULKSMS_INACTIVE")
 	token := testSecrets.MustGetField("BULKSMS_TOKEN")
-
 
 	type args struct {
 		ctx    context.Context
@@ -45,7 +44,7 @@ func TestBulksms_FromChunk(t *testing.T) {
 			s:    Scanner{},
 			args: args{
 				ctx:    context.Background(),
-				data:   []byte(fmt.Sprintf("You can find a bulksms secret %s within bulksms %s", secret,token)),
+				data:   []byte(fmt.Sprintf("You can find a bulksms secret %s within bulksms %s", secret, token)),
 				verify: true,
 			},
 			want: []detectors.Result{
@@ -61,7 +60,7 @@ func TestBulksms_FromChunk(t *testing.T) {
 			s:    Scanner{},
 			args: args{
 				ctx:    context.Background(),
-				data:   []byte(fmt.Sprintf("You can find a bulksms secret %s within bulksms but %s not valid", inactiveSecret,token)), // the secret would satisfy the regex but not pass validation
+				data:   []byte(fmt.Sprintf("You can find a bulksms secret %s within bulksms but %s not valid", inactiveSecret, token)), // the secret would satisfy the regex but not pass validation
 				verify: true,
 			},
 			want: []detectors.Result{

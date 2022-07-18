@@ -8,13 +8,13 @@ import (
 	"github.com/go-errors/errors"
 	"github.com/go-git/go-git/v5/plumbing/object"
 
+	"github.com/akeylesslabs/trufflehog/pkg/common"
+	"github.com/akeylesslabs/trufflehog/pkg/pb/source_metadatapb"
+	"github.com/akeylesslabs/trufflehog/pkg/pb/sourcespb"
+	"github.com/akeylesslabs/trufflehog/pkg/sources/git"
 	gogit "github.com/go-git/go-git/v5"
 	"github.com/go-git/go-git/v5/plumbing"
 	"github.com/sirupsen/logrus"
-	"github.com/trufflesecurity/trufflehog/v3/pkg/common"
-	"github.com/trufflesecurity/trufflehog/v3/pkg/pb/source_metadatapb"
-	"github.com/trufflesecurity/trufflehog/v3/pkg/pb/sourcespb"
-	"github.com/trufflesecurity/trufflehog/v3/pkg/sources/git"
 )
 
 func (e *Engine) ScanGit(ctx context.Context, repoPath, headRef, baseRef string, maxDepth int, filter *common.Filter) error {

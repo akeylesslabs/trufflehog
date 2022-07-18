@@ -17,7 +17,7 @@ import (
 	"github.com/jpillora/overseer/fetcher"
 	log "github.com/sirupsen/logrus"
 
-	"github.com/trufflesecurity/trufflehog/v3/pkg/version"
+	"github.com/akeylesslabs/trufflehog/pkg/version"
 )
 
 func Fetcher(version string) fetcher.Interface {

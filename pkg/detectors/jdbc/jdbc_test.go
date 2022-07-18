@@ -8,9 +8,9 @@ import (
 	"os"
 	"testing"
 
+	"github.com/akeylesslabs/trufflehog/pkg/detectors"
+	"github.com/akeylesslabs/trufflehog/pkg/pb/detectorspb"
 	"github.com/kylelemons/godebug/pretty"
-	"github.com/trufflesecurity/trufflehog/v3/pkg/detectors"
-	"github.com/trufflesecurity/trufflehog/v3/pkg/pb/detectorspb"
 )
 
 func TestJdbc_FromChunk(t *testing.T) {

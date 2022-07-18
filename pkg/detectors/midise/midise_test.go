@@ -7,8 +7,8 @@ import (
 	"context"
 	"testing"
 
+	"github.com/akeylesslabs/trufflehog/pkg/detectors"
 	"github.com/kylelemons/godebug/pretty"
-	"github.com/trufflesecurity/trufflehog/v3/pkg/detectors"
 )
 
 func TestTruffle_FromChunk(t *testing.T) {

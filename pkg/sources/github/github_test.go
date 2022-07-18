@@ -15,11 +15,11 @@ import (
 	"testing"
 	"time"
 
+	"github.com/akeylesslabs/trufflehog/pkg/pb/credentialspb"
+	"github.com/akeylesslabs/trufflehog/pkg/pb/sourcespb"
 	"github.com/google/go-github/v42/github"
 	"github.com/sirupsen/logrus"
 	"github.com/stretchr/testify/assert"
-	"github.com/trufflesecurity/trufflehog/v3/pkg/pb/credentialspb"
-	"github.com/trufflesecurity/trufflehog/v3/pkg/pb/sourcespb"
 	"google.golang.org/protobuf/types/known/anypb"
 	"gopkg.in/h2non/gock.v1"
 )

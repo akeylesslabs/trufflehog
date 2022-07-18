@@ -4,12 +4,13 @@ import (
 	"context"
 	"crypto/tls"
 	"fmt"
-	"github.com/trufflesecurity/trufflehog/v3/pkg/common"
 	"io"
 	"net"
 	"runtime"
 	"strconv"
 	"time"
+
+	"github.com/akeylesslabs/trufflehog/pkg/common"
 
 	"github.com/bill-rich/go-syslog/pkg/syslogparser/rfc3164"
 	"github.com/crewjam/rfc5424"
@@ -19,9 +20,9 @@ import (
 	"google.golang.org/protobuf/proto"
 	"google.golang.org/protobuf/types/known/anypb"
 
-	"github.com/trufflesecurity/trufflehog/v3/pkg/pb/source_metadatapb"
-	"github.com/trufflesecurity/trufflehog/v3/pkg/pb/sourcespb"
-	"github.com/trufflesecurity/trufflehog/v3/pkg/sources"
+	"github.com/akeylesslabs/trufflehog/pkg/pb/source_metadatapb"
+	"github.com/akeylesslabs/trufflehog/pkg/pb/sourcespb"
+	"github.com/akeylesslabs/trufflehog/pkg/sources"
 )
 
 const nilString = ""

@@ -2,17 +2,18 @@ package spotifykey
 
 import (
 	"context"
+
 	"golang.org/x/oauth2"
 
 	"regexp"
 	"strings"
 
-	"github.com/trufflesecurity/trufflehog/v3/pkg/common"
-	"github.com/trufflesecurity/trufflehog/v3/pkg/detectors"
+	"github.com/akeylesslabs/trufflehog/pkg/common"
+	"github.com/akeylesslabs/trufflehog/pkg/detectors"
 
 	"golang.org/x/oauth2/clientcredentials"
 
-	"github.com/trufflesecurity/trufflehog/v3/pkg/pb/detectorspb"
+	"github.com/akeylesslabs/trufflehog/pkg/pb/detectorspb"
 )
 
 type Scanner struct{}
